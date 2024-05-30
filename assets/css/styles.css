@@ -768,7 +768,7 @@ img{
 }
 
 .swiper-pagination {
-    position: absolute;
+    position: relative;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
