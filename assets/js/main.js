@@ -69,6 +69,18 @@ tabs.forEach(tab =>{
 })
 
 /*==================== Expertise MODAL ====================*/
+// Initialize Swiper for Expertise Section
+/*==================== Expertise MODAL ====================*/
+// Initialize Swiper for Expertise Section
+var expertiseSwiper = new Swiper('.Expertise__container.swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
 const modalViews = document.querySelectorAll('.Expertise__modal'),
     modalBtns = document.querySelectorAll('.Expertise__button'),
     modalCloses = document.querySelectorAll('.Expertise__modal-close');
@@ -90,6 +102,7 @@ modalCloses.forEach(modalClose => {
         });
     });
 });
+
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper(".portfolio__container", {
