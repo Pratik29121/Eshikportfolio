@@ -104,7 +104,6 @@ body.dark-theme{
 }
 
 /*==================== BASE ====================*/
-
 *{
     box-sizing: border-box;
     padding: 0;
@@ -212,46 +211,19 @@ img{
     color: var(--first-color);
 }
 
-@media screen and (max-width: 767px) {
-    
-    .nav__menu {
+@media screen and (max-width: 767px){
+    .nav__menu{
         position: fixed;
-        top: -100%; /* Change from bottom to top */
+        bottom: -100%;
         left: 0;
         width: 100%;
         background-color: var(--body-color);
         padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 1px 4px rgba(0,0,0,.15); /* Adjust shadow to top */
-        border-radius: 0 0 1.5rem 1.5rem; /* Adjust border radius */
+        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+        border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
-    .nav__menu.show-menu {
-        top: 0; /* Change from bottom to top */
-    }
-    .nav__close {
-        position: absolute;
-        right: 1.3rem;
-        top: 1rem; /* Adjust position */
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--first-color);
-    }
-    .nav__top {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1.5rem;
-        background-color: var(--body-color);
-        box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
-        position: fixed; /* Position fixed to stay at the top */
-        top: 0; /* Align to the top of the viewport */
-        z-index: 1000; /* Ensure it stays above other elements */
-    }
 }
-
-
-
 
 .nav__list{
     grid-template-columns: repeat(3, 1fr);
@@ -342,7 +314,7 @@ img{
 }
 
 .home__title{
-    font-size: 2.25rem;
+    font-size: var(--big-font-size);
 }
 
 .home__subtitle{
@@ -382,39 +354,6 @@ img{
 
 .home__scroll-arrow{
     font-size: 1.25rem;
-}
-
-.home__img {
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%; /* Makes the image round */
-    border: 4px solid #edc7c7; /* Add border */
-}
-
-.home__img img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease; /* Add transition for smooth effect */
-}
-
-.home__img:hover img {
-    transform: scale(1.1); /* Add scaling effect on hover */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .home__img {
-        width: 80%; /* Adjust width for smaller screens */
-        margin: 0 auto;
-    }
-}
-
-
-.home__img {
-    position: relative;
-    overflow: hidden;
-    border-radius: 5%; /* Makes the image round */
 }
 
 /*==================== BUTTONS ====================*/
@@ -504,27 +443,6 @@ img{
 .about__buttons{
     display: flex;
     justify-content: center;
-}
-
-.about__img:hover {
-    transform: scale(1.1); /* Example of a simple zoom effect */
-    transition: transform 0.3s ease;
-    /* Add other effects like changing opacity or adding a color overlay */
-}
-
-.about__img {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example of a subtle box shadow */
-    /* Add vendor prefixes for wider browser compatibility if needed */
-}
-
-.about__img {
-    border: 2px solid #edc7c7; /* Example border styling */
-    /* Adjust border color, thickness, and style as needed */
-}
-
-.about__img {
-    border-radius: 5%; /* Example of a circular image */
-    /* Adjust border-radius as needed */
 }
 
 /*==================== SKILLS ====================*/
@@ -745,35 +663,32 @@ img{
     border-radius: .2rem;
 }
 /*==================== Expertise ====================*/
-.Expertise__container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center; /* Center align images */
+.Expertise__container{
+    overflow: initial;
+    /* gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr); */
 }
 
 .Expertise__image {
-    max-width: 50%;
+    width: 320px;
     height: auto;
+    margin-bottom: 15px;
     border-radius: 8px;
-    /* Add any additional styling you need */
 }
 
-.swiper-pagination {
-    position: relative;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+.Expertise__title {
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
+#Expertise__wrapper {
+    margin: auto;
+}
+
+.active-modal{
+    opacity: 1;
+    visibility: visible;
+}
 
 /*==================== PORTFOLIO ====================*/
 .portfolio__container{
@@ -829,13 +744,9 @@ img{
     right: -.5rem;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
-    position: absolute;
-    left: 10px; /* Adjust as needed */
-    bottom: 10px; /* Adjust as needed */
-    transform: none; /* Reset transform */
+.swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: -2.5rem;
 }
-
 
 .swiper-pagination-bullet-active{
     background-color: var(--first-color);
@@ -1356,12 +1267,6 @@ img{
     .Expertise__container{
         grid-template-columns: repeat(3, 238px);
     }
-
-    .Expertise__image {
-    max-width: 250px;
-     height: auto;   
-    /* Add any additional styling you need */
-}
 
     .portfolio__content{
         column-gap: 5rem;
