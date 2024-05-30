@@ -1357,6 +1357,11 @@ img{
         grid-template-columns: repeat(3, 238px);
     }
 
+    .Expertise__image {
+    max-width: 35%;
+    /* Add any additional styling you need */
+}
+
     .portfolio__content{
         column-gap: 5rem;
     }
