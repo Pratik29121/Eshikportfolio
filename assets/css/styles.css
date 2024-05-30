@@ -746,7 +746,7 @@ img{
 }
 /*==================== Expertise ====================*/
 .Expertise__container {
-    position: relative;
+/*     position: relative; */
     overflow: initial;
 /*     width: 100%; */
 /*     height: 100%; */
@@ -762,7 +762,7 @@ img{
 }
 
 .Expertise__image {
-    max-width: 50%;
+    width: 320px;
     height: auto;
     border-radius: 8px;
     /* Add any additional styling you need */
